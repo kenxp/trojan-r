@@ -14,8 +14,6 @@ jobs:
         with:
           toolchain: stable
       - name: Build
-        env:
-          RUSTFLAGS: -C target-cpu=amdfam10 #-Cprofile-generate=pgodata -Cpanic=abort
         run: 
           cargo build --release
 
@@ -38,8 +36,6 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           use-cross: true
-          env: 
-            RUSTFLAGS='-C target-cpu=cortex-a53'
           command: build
           args: --release --target aarch64-linux-android
       - uses: actions/upload-artifact@v2
@@ -87,8 +83,6 @@ jobs:
         with:
           use-cross: true
           command: build
-          env:
-            RUSTFLAGS='-C target-cpu=mips32r2'
           args: --release --target mipsel-unknown-linux-musl
 
       - uses: actions/upload-artifact@v2
@@ -107,8 +101,6 @@ jobs:
           override: true
       - uses: actions-rs/cargo@v1
         with:
-          env: 
-            RUSTFLAGS='-C target-cpu=cascadelake'
           command: build
           args: --release
       - uses: actions/upload-artifact@v2
