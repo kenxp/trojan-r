@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Checkout target source
         run: |
-          git clone https://github.com/kenxp/rust_vue.git .
+          git clone https://github.com/mengyou658/poem_admin_openapi .
 
 
       - name: Checkout ring PR 1181 with mips support
