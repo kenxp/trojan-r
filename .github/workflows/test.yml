@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch:
 
-name: rust mipsel build
+name: mipsel
 
 jobs:
 
