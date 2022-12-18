@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Checkout target source
         run: |
-          git clone https://github.com/mengyou658/poem_admin_openapi .
+          git clone https://github.com/lingdu1234/poem_admin.git .
 
 
       - name: Checkout ring PR 1181 with mips support
